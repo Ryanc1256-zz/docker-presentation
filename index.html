@@ -1,0 +1,254 @@
+<html>
+    <head>
+        <link href="css/reveal.css" rel="stylesheet" />
+        <link href="css/white.css" rel="stylesheet" />
+        <script type="text/javascript" src="js/reveal.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+
+        <title>Docker</title>
+
+        <!-- https://github.com/hakimel/reveal.js -->
+
+    </head>
+    <body>
+      <div class="reveal">
+            <div class="slides">
+                <section>
+                    <img src="http://xahlee.info/UnixResource_dir/gki/docker_logo.png"  />
+                </section>
+
+
+                <section>
+                    So what is this whale, with shipping containers on it's back?
+                    <p class="fragment">
+                       Well, it's docker the docker logo?
+                    </p>
+                    <p class="fragment">
+                        But what is it about, you say?
+                    </p>
+
+                </section>
+
+                <!--- what -- >
+                <section>
+                    <section>
+                        So docker is a virtualisation platform.
+                    </section>
+                    <section>
+                        So it's vastly easier to deploy a small container to a cloud service,
+                        than to make your own system for deployment management and maintance
+                    </section>
+                    <section>
+                      So wait....
+                    </section>
+
+                    <section>
+                      What can you do on it?
+                    </section>
+
+
+                    <section>
+                      What can't you do on it, is the question you should be asking.
+                    </section>
+                </section>
+
+                <!-- why -->
+                <section>
+                    <section>
+                        So why should i use this platform?
+                    </section>
+
+                    <section>
+                        Well you should be using for scalabity, security and most importantly for your developers.
+                    </section>
+
+                    <section>
+                        It's makes deployment maintance a breaze...
+                        So deployment?
+
+                        <pre class="fragment">
+                          <code class="bash">docker push . --tag yourimagename </code>
+                        </pre>
+
+                        <p class="fragment">
+                          It shouldn't be this easy, well it is!
+                        </p>
+
+                    </section>
+
+                </section>
+
+
+                <section>
+                    <section>
+                      What things can I do?
+                    </section>
+
+                    <section>
+                        There are some wicked Docker images out there, all ready.
+                        You just have to go find them.
+                    </section>
+
+
+                    <section>
+                        <img data-src='https://raw.githubusercontent.com/docker/dockercraft/master/docs/img/logo.png' style="position: absolute; top: -159px; left: -280px"  />
+
+                        <p>
+                          Like, if you into minecraft, there is a
+                          docker image called Dockercraft, and it lets you manage your cluster within Minecraft.
+                        </p>
+
+                        <img data-src='https://raw.githubusercontent.com/docker/dockercraft/master/docs/img/dockercraft.gif'  />
+
+                    </section>
+
+                    <section>
+                        <!-- storage system -->
+
+                        <p>
+                            There is blob storages, like Amazon Web Services and Google Cloud Storage...
+                        </p>
+
+                        <p><small>
+                          https://hub.docker.com/r/deis/store-gateway/
+                        </small></p>
+
+
+                    </section>
+                </section>
+                <section>
+                   <section>
+                     Who use it?
+                   </section>
+
+                   <section>
+                      Name a big company, they are using it...
+                   </section>
+
+                   <section>
+                      Here is a few!
+                      <br  />
+                      Google, Amazon, Facebook, Twitter, Microsoft, Trademe, Xero, Apple, HP and Solnet!
+                   </section>
+                </section>
+
+                <section>
+                    <section>
+                        Scale?
+                    </section>
+
+                    <section>
+                        Scale is a strong selling point for this platform.
+                    </section>
+
+                    <section>
+                        Most if not all Cloud platform have a idea of 'cluster',
+                        A cluster is best visualised as 'group of virtual machines'
+                        with a cluster you can it from 1 to 1M pods
+                    </section>
+                </section>
+
+                <section>
+                  <section>
+                      Linking?
+                  </section>
+                  <section>
+                      So linking 'pods' together is great! it's very handy in the way
+                      of databases that are in there own scalable cluster.
+
+                      <p class="fragment">
+                        So you can create a link between two or more pods, and make an external service accessible within
+                        a pod, so a good example is mongodb.
+                      </p>
+
+                  </section>
+                </section>
+
+                <section>
+                    <section>
+                        Docker Management
+                    </section>
+
+                    <section>
+                        There is quite a few management tools out there..
+                    </section>
+
+                    <section>
+                        I will just list the two popular
+
+                         <p class="fragment">
+                            Kubenetics
+                         </p>
+
+                         <p class="fragment">
+                            Docker swarm
+                         </p>
+                    </section>
+
+                    <section>
+                        Kubernetes  is a tool made by Google then open sourced, for use
+                        in the public and a lot of high tier companies have started to use it,
+                        like
+
+                        <p class="fragment">
+                            ebay
+                        </p>
+
+                        <p class="fragment">
+                            yahoo
+                        </p>
+
+                        <p class="fragment">
+                            samsung
+                        </p>
+
+                        <p class="fragment">
+                            google
+                        </p>
+
+                        <p class="fragment">
+                            redhat, to name a few.
+                        </p>
+                      </section>
+
+                      <section>
+
+                        It makes tasks vastly easier for example scale...
+
+                        <p class="fragment">
+                            <code class="bash">kubeclt scale --replicas=5 rc myproject </code>
+                        </p>
+                    </section>
+
+                    <section>
+                        Also a lot of other maintance tasks are vaslty easier
+
+                        <p class="fragment">
+                            removing a image, pods and release candidates
+                        </p>
+
+                        <p class="fragment">
+                            making new releases
+                        </p>
+
+                        <p class="fragment">
+                            deployments, this part is vaslty cooler... you can do a thing
+                            called 'rolling updates' which means that they will slowly update each pod,
+                            making sure that nothing is going to crash and break
+                        </p>
+
+                    </section>
+                </section>
+
+                <section>
+                    Thats it fokes!
+                </section>
+            </div>
+        </div>
+      <script type="text/javascript">
+          Reveal.initialize();
+          hljs.initHighlightingOnLoad();
+      </script>
+    </body>
+</html>
